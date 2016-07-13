@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>application_04</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Inheritance</h1>
+<p><strong>Inheritance</strong> lets us define classes that model relationships among types, sharing what is common and specializing only that which is inherently different. Members defined by the <strong>base class</strong> are inherited by its <strong>derived classes</strong>. The derived class can use, without change, those operations that do not depend on the specifics of the derived type. It can redefine those member functions that do depend on its type, specializing the function to take into account the peculiarities of the derived type. Finally, a derived class may define additional members beyond those it inherits from its base class.</p>
+<p>In many ways, base and derived classes are <strong>defined</strong> like other classes we have already seen. However, there are some additional features that are required when defining classes in an <strong>inheritance hierarchy</strong>. This section will present those features.</p>
+<p>To define a derived class, we use a class <strong>derivation list</strong> to specify the base class(es). A class derivation list names one or more base classes and has the form </p>
+<pre><code>class class_name: access_label base_class 
+</code></pre>
+
+<p>where access<em>label is one of <strong>public</strong>, <strong>protected</strong>, or <strong>private</strong>, and base</em>class is the name of a previously defined class.</p>
+<p>Access to the members the class inherits is controlled by a combination of the <strong>access level</strong> of the member in the <strong>base class</strong> and the access label used in the <strong>derived class'</strong> derivation list.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+/* the class Base */
+class Base {
+public:
+    /* a public function is public derived by derived class through public access level*/
+    Base() 
+    { 
+        protected_data = 1;
+        private_data = 0;
+        cout &lt;&lt; &quot;I am class Base!&quot; &lt;&lt; endl; 
+    }
+protected:
+    /* a protected member can be accessed by public derived class */
+    int protected_data;
+private:
+    /* a private member only can be accessed by this class */
+    int private_data;
+};
+
+/* the class Derived */
+class Derived:public Base {
+public:
+    /* a public constructor function */
+    Derived() 
+    {
+        derived_private_data = 1;
+        cout &lt;&lt; &quot;I am class Derived!&quot; &lt;&lt; endl; 
+    }
+    /* access to the protected member of the base class */
+    int getBaseData() { return protected_data; }
+private:
+    int derived_private_data;
+};
+
+/* function main begins program execution */
+int main()
+{
+    Derived derived_object;  /* instantiate a derived object */
+    cout &lt;&lt; derived_object.getBaseData() &lt;&lt; endl; /* call the public function */
+} /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>I am class Base!
+I am class Derived!
+1
+</code></pre>
+
+<p>A <strong>protected</strong> member may be accessed by a derived object but may not be accessed by general users of the type</p>
+<blockquote>
+<ul>
+<li>In <strong>public inheritance</strong>, the members of the base retain their access levels: The public members of the base are public members of the derived and the protected members of the base are protected in the derived.</li>
+<li>In <strong>protected inheritance</strong>, the public and protected members of the base class are protected members in the derived class.</li>
+<li>In <strong>private inheritance</strong>, all the members of the base class are private in the derived class.</li>
+</ul>
+</blockquote>
+<p><strong>derived class constructor</strong></p>
+<p><strong>Derived constructors</strong> are affected by the fact that they inherit from another class. Each derived constructor initializes its <strong>base class</strong> in addition to initializing its own data members.</p>
+<pre><code>    /* a public constructor function */
+    Derived() 
+    {
+        derived_private_data = 1;
+        cout &lt;&lt; &quot;I am class Derived!&quot; &lt;&lt; endl; 
+    }
+</code></pre>
+
+<p>The constructor initializer invokes the <strong>Base</strong> class <strong>default constructor</strong> to initialize its base-class part.</p>
+<p>The constructor initializer list may not directly initialize its inherited members. Instead, a derived constructor indirectly initializes the members it inherits by including its base class in its constructor initializer list:</p>
+<pre><code>    /* another derived constructor function including its base class's constructor */
+    Derived1(int initializer1, int initializer2):Base1(initializer1)
+    {
+        derived1_private_data = initializer2;
+        cout &lt;&lt; &quot;I am class Derived!&quot; &lt;&lt; endl; 
+    }
+</code></pre>
+
+<p><strong>derived class copy constructor</strong></p>
+<p>If a derived class defines its own <strong>copy constructor,</strong> that copy constructor usually should <strong>explicitly</strong> use the base-class copy constructor to initialize the base part of the object:</p>
+<pre><code>class Base { function_body };
+class Derived: public Base {
+public:
+    /* Base::Base(const Base&amp;) not invoked automatically */
+    /* Derived class copy constructor should explicitly use the base class copy constructor */
+    Derived(const Derived&amp; d):Base(d) { function_body }
+};
+</code></pre>
+
+<p>Had the initializer for the base class been omitted,</p>
+<pre><code>// probably incorrect definition of the Derived copy constructor
+Derived(const Derived&amp; d) /* derived member initizations */
+{ function_body }
+</code></pre>
+
+<p>the effect would be to run the Base <strong>default constructor</strong> to initialize the base part of the
+object.</p>
+<p><strong>derived class destructor</strong></p>
+<p>The destructor works differently from the copy constructor and assignment operator: The derived destructor is never responsible for destroying the members of its base objects. The compiler always implicitly invokes the destructor for the base part of a derived object. Each destructor does only what is necessary to clean up its own members.</p>
+<p><strong>multiple and virtual Inheritance</strong></p>
+<p>Multiple inheritance is the ability to derive a class from more than one immediate base class. A multiply derived class inherits the properties of all its parents.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Base1 {
+public:
+    Base1(int i) { data1 = i; }
+protected:
+    int data1;
+};
+
+class Base2 {
+public:
+    Base2(int j) { data2 = j; }
+protected:
+    int data2;
+};
+
+/* Derived class multiple inheritance */
+class Derived:public Base1, Base2 {
+public:
+    Derived(int i, int j) :Base1(i), Base2(j) {
+        cout &lt;&lt; &quot;I am Base1's data: &quot; &lt;&lt; data1 &lt;&lt; endl;
+        cout &lt;&lt; &quot;I am Base2's data &quot; &lt;&lt; data2 &lt;&lt; endl;
+    }
+};
+
+/* function main begins program execution */
+int main() {
+    Derived multiply_derived_object(1, 2);
+} /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>I am Base1's data: 1
+I am Base2's data 2
+</code></pre>
+
+<h1>Polymorphism</h1>
+<p><strong>Dynamic Binding</strong></p>
+<p><strong>Dynamic binding</strong> lets us write programs that use objects of any type in an inheritance hierarchy without caring about the objects' specific types. Programs that use these classes need not distinguish between functions defined in the base or in a derived class.In C++, dynamic binding happens when a virtual function is called through a <strong>reference</strong> (or a <strong>pointer</strong>) to a base class.</p>
+<p><strong>vitual function</strong></p>
+<p>Functions defined as <strong>virtual</strong> are ones that the base expects its derived classes to redefine. Functions that the base class intends its children to inherit are not defined as virtual.</p>
+<p>Because every derived object contains a base part, we can bind a base-type reference to the base-class part of a derived object. We can also use a pointer to base to point to a derived object:</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+/* the class Base */
+class Base {
+public:
+    Base() {}
+    /* a virtual function */
+    virtual void print() { cout &lt;&lt; &quot;Hello! You are printing a Base object now!&quot; &lt;&lt; endl; }
+};
+
+/* the class Derived */
+class Derived:public Base {
+public:
+    Derived() {}
+    /* a virtual redefined function */
+    void print() { cout &lt;&lt; &quot;Hello! You are printing a Derived object now!&quot; &lt;&lt; endl; }
+};
+
+/* function main begins program execution */
+int main()
+{
+    Derived dereived_object;
+    Base&amp; base_reference = dereived_object;
+    base_reference.print();
+} /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>Hello! You are printing a Derived object now!
+</code></pre>
+
+<p>The output screen without <strong>virtual</strong></p>
+<pre><code>Hello! You are printing a Base object now!
+</code></pre>
+
+<p><strong>pure virtual function</strong></p>
+<p>Defining a virtual as pure indicates that the function provides an interface for sub-sequent types to override but that the version in this class will never be called. As importantly, users will not be able to create objects of this class.</p>
+<p>A pure virtual function is specified by writing = 0 after the function parameter list:</p>
+<pre><code>class class_name {
+public:
+    return_type function_name(parameters_list) = 0;
+};
+</code></pre>
+
+<p>A class containing (or inheriting) one or more pure virtual functions is an abstract base class. An attempt to create an object of an abstract base class is a compile-time error.</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

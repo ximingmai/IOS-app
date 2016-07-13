@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>application_02</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Foundation of C++_01</h1>
+<h3>Variable &amp;&amp; Basic Types</h3>
+<p>C++ contains many basic types(primitive built-in types)</p>
+<blockquote>
+<p><strong>Type</strong>				<strong>Meaning</strong></p>
+<p>bool                   boolean</p>
+<p>char                  character</p>
+<p>short              short integer</p>
+<p>int                   integer</p>
+<p>long               long integer</p>
+<p>float      single-precision floating-point</p>
+<p>double     double-precision floating-point</p>
+<p>long double   extended-precision floating-point</p>
+</blockquote>
+<p><em>bool</em>,<em>char<em>,</em>int</em>... these are keywords in C++ programming and these words have their specific meaning(int means integer) to the C compiler. <strong>bool</strong> is stored as integer in memory and <strong>bool</strong> only has two value '0'(<strong>false</strong>) and '1'(<strong>true</strong>).</p>
+<pre><code>/* function main begins program execution */
+int main()
+{
+    int integer1;
+    int integer2;
+}  /* end function main */
+</code></pre>
+
+<p>This program does nothig but defines two <em>variables</em>.</p>
+<pre><code>int integer1;
+int integer2;
+</code></pre>
+
+<p>These are <strong><em>declarations</em></strong>. All variables must be declared with a name and a data type immediately after the left brace that begins the body of main before they can be used in a program. A <strong>varible</strong> is a location in memory where a value can be stored for use by a program. <strong>integer1</strong> and <strong>integer2</strong> are the names of variables. This declarations means that the variables <strong>integer1</strong> and <strong>integer2</strong> are of type <strong>int</strong> which means that these variables will hold <em>integer</em> values.
+Let's have a try.</p>
+<pre><code>bool this_is_a_bool;
+float i_am_a_float;
+</code></pre>
+
+<p>A <strong>variable name</strong> in C++ is any valid <em>identifier</em>. An identifier is a series of characters consisting of letters, digits and underscores(_) that does not begin with a digit.</p>
+<pre><code>/* function main begins program execution */
+int main()
+{
+    int integer1 = 0;
+    int integer2 = 1;
+    int sum;
+    sum = integer1 + integer2;
+}  /* end function main */
+</code></pre>
+
+<p>This program calculates the sum of variables <strong>integer1</strong> and <strong>integer2</strong> and assigns the result to variable <strong>sum</strong> using the <em>assignment operator =</em>. This is <strong>definition</strong> which gives declared variable a value. <code>int integer1 = 0;</code> <em>initializes</em> the variable integer1 and assigns value <strong>0</strong> to integer1. You can through <strong>initialization</strong></p>
+<pre><code>type variable = value;
+</code></pre>
+
+<p>or</p>
+<pre><code>/* initialization */
+type variable; /* declaration */
+variable = value; /* definition */
+</code></pre>
+
+<p>gives the variable a value you like.</p>
+<pre><code>const type variable = value;
+</code></pre>
+
+<p>or</p>
+<pre><code>const type variable; /* declaration */
+variable = value; /* definition */
+</code></pre>
+
+<p>Obviously, this program is similar to the last one. However, the keyword <strong>const</strong> makes variable unmodifiable which means that you can not define the same variable more than once. Once you give a value to the variable, it can not be changed.</p>
+<pre><code>#include&lt;iostream&gt;
+/* function main begins program execution */
+int main()
+{
+    int integer1 = 0;
+    int &amp;integer2 = integer1; /* integer2 is integer1's reference. */
+    std::cout &lt;&lt; integer1 &lt;&lt; &quot; &quot; &lt;&lt; integer2 &lt;&lt; std::endl;
+}  /* end function main */
+</code></pre>
+
+<p>the output screen</p>
+<pre><code>0 0
+</code></pre>
+
+<p><strong>Reference</strong> is just an alias for an object(integer2 is another name of integer1). A <em>reference</em> is declared by preceding a viariable name by the <strong>&amp;</strong> symbol and it must be initialized and only be initialized using an object of the same type. After initializing, the operations on a reference are actually operations on the underlying object to which the reference is bound.</p>
+<h3>Library Types</h3>
+<p>In addition to C++ primitive types, C++ defines a rich library of abstract data types. </p>
+<pre><code>#include&lt;string&gt;
+#include&lt;iostream&gt;
+using std::string;
+using std::cout;
+using std::endl;
+/* function main begins program execution */
+int main()
+{
+    string string1(&quot;Welcome to C++!\n&quot;);
+    cout &lt;&lt; string1 &lt;&lt; endl;
+    string1 = &quot;Hello! I am a string.\n&quot;;
+    cout &lt;&lt; string1 &lt;&lt; endl;
+}  /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>Welcome to C++!
+Hello! I am a string.
+</code></pre>
+
+<p><strong>String</strong> is an important type in C++ which stores <em>character string</em> for you. <code>string variable(&quot;character string&quot;)</code> is initialization of string variable. It also has many other forms.</p>
+<pre><code>string variable;  /* empty string */
+string variable(&quot;character string&quot;);  /* initialize string as a copy of character string */
+string variable(another string);  /* initialize string as a copy of another string */
+string variable(int, &quot;character string&quot;); /* initialize string with int copies of character string */
+</code></pre>
+
+<p>You can also use <code>cin &gt;&gt; string</code> to read a string from user and use <code>cout &gt;&gt; string</code> to print a string on the screen. This line <code>string1 = &quot;Hello! I am a string.\n&quot;;</code> is an assignment operation on string. Let's have a try on some operations on string.</p>
+<pre><code>#include&lt;string&gt;
+#include&lt;iostream&gt;
+using std::string;
+using std::cout;
+using std::endl;
+/* function main begins program execution */
+int main()
+{
+    string string1;
+    cout &lt;&lt; string1.empty() &lt;&lt; endl; /* this operation decides whether string is empty */
+    string1 = &quot;Hello! I am a string.\n&quot;;
+    cout &lt;&lt; string1.size() &lt;&lt; endl; /* this operation returns the number of characters in string1 */
+    cout &lt;&lt; string1[0] &lt;&lt; endl; /* this operation returns the character at position 0 in string1 */
+    string string2;
+    string2 = string1;  /* this operation replaces characters in string2 by a copy of string1; */
+    cout &lt;&lt; (string2 == string1) &lt;&lt; endl; /* this operation decides whether string1 is equal to string2 */ 
+    string2 = string2 + string1;  /* this operation(+) returns the concatenation of string2 and string1 */
+    cout &lt;&lt; string2 &lt;&lt; endl;
+}  /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>1
+22
+H
+1
+Hello! I am a string.
+Hello! I am a string.
+</code></pre>
+
+<p><strong>vector</strong> plays an important role in C++.</p>
+<pre><code>#include&lt;vector&gt;
+using std::vector;
+/* function main begins program execution */
+int main()
+{
+    vector&lt;int&gt; vector1;
+}  /* end function main */
+</code></pre>
+
+<p>We should <em>include</em> <strong>vector</strong> and <em>use</em> <strong>std::vector</strong> to use a <strong>vector</strong>. A <em>vector</em> is a collection of objects of single type. <code>vector&lt;int&gt; vector1</code> means that vector1 is a collection of objects of <strong>int</strong>. You can use <code>vector&lt;type&gt; variable name</code> to define your own <em>vector</em>. Let's have a try on operations on <em>vector</em>.</p>
+<pre><code>#include&lt;vector&gt;
+#include&lt;iostream&gt;
+using std::vector;
+using std::cout;
+using std::endl;
+/* function main begins program execution */
+int main()
+{
+    vector&lt;int&gt; vector1;
+    cout &lt;&lt; vector1.empty() &lt;&lt; endl;  /* this operation decides whether vector is empty */
+    vector1.push_back(0);  /* this operation adds element with value 0 to end of vector1 */
+    cout &lt;&lt; vector1.size() &lt;&lt; &quot; &quot; &lt;&lt; vector1[0] &lt;&lt; endl; /* the operation vector1.size() returns the number of characters in string1 and the operation vector1[0] returns the character at position 0 in string1 */
+    vector1.pop_back(); /* this operation pops element at the end of vector1 */
+    cout &lt;&lt; vector1.empty() &lt;&lt; endl;
+}  /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>1
+1 0
+1
+</code></pre>
+
+<h3>Array</h3>
+<p>An <strong>array</strong> is a compound type that consists of a <strong>type specifier</strong>, an <strong>identifier</strong>, and a <strong>dimension</strong>. The type specifier indicates what type the elements stored in the array will have. The dimension specifies how many elements the array will contain.</p>
+<p>The dimension must be a constant expression whose value is greater than or equal to one and the dimension is specified inside a [] bracket pair.</p>
+<p>The form of the definition of array:</p>
+<pre><code>type_specifier identifier[dimension];
+</code></pre>
+
+<p>The elements of an array are numbered beginning with 0.Array elements can be accessed using the subscript operator.</p>
+<pre><code>identifier[index];
+</code></pre>
+
+<h3>pointer</h3>
+<p>A <strong>pointer</strong>, a compound type, points to an object of some other type and hold address of the type.</p>
+<p>We use the * symbol in a declaration to indicate that an identifier is a pointer.</p>
+<pre><code>vector&lt;int&gt; *pvec; // pvec can point to a vector&lt;int&gt;
+int *ip1, *ip2; // ip1 and ip2 can point to an int
+string *pstring; // pstring can point to a string
+double *dp; // dp can point to a double
+</code></pre>
+
+<p>There are some kinds of values that may be used to <strong>initialize</strong> or assign to a pointer:</p>
+<pre><code>int* p;
+int number = 0;
+p = NULL;  /*  A constant expression with value 0(A zero-valued pointer points to no object and also the cstdlib header defines a preprocessor variable named NULL, which is defined as 0) */
+p = &amp;number;  /*An address of an object of an appropriate type */
+int* p0 = p;  /* Another valid pointer of the same type */
+cout &lt;&lt; *p0;
+</code></pre>
+
+<p>We can use the symbol <strong>&amp;</strong> to get the address of an object(&amp;object).</p>
+<p>We can access the object by dereferencing the pointer. The * operator (the dereference operator) returns the object to which the pointer points.</p>
+<h3>scope</h3>
+<p>The context used to distinguish the meanings of names is a <strong>scope</strong>. A scope is a region of the program. A name can refer to different entities in different scopes.</p>
+<p>Most scopes in C++ are delimited by curly braces. Generally, names are visible from their point of declaration until the end the scope in which the declaration appears.</p>
+<pre><code>#include &lt;iostream&gt;
+int main()
+{
+    int sum = 0;
+    // sum values from 1 up to 10 inclusive
+    for (int val = 1; val &lt;= 10; ++val)
+    sum += val; // equivalent to sum = sum + val
+    std::cout &lt;&lt; &quot;Sum of 1 to 10 inclusive is &quot; &lt;&lt; sum &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+
+<p>This program defines three names and uses two names from the standard library.Names defined outside any function(<code>main</code>) have global scope; they are accessible from anywhere in the program.</p>
+<p>The name sum is defined within the scope of the main function. It is accessible throughout the main function but not outside of it. The variable sum has local scope. 
+The name is defined in the scope of the for statement. It can be used in that statement but not elsewhere in main. It has statement scope.</p>
+<h3>namespace</h3>
+<p>A <strong>namespace</strong> is a <strong>scope</strong>. By defining a library's names inside a namespace, library authors (and users) can avoid the limitations inherent in global names.</p>
+<pre><code>namespace student_A {
+    int id;
+    string name;
+    int grade;
+    int math_grade;
+    //...
+}
+</code></pre>
+
+<p>A <strong>namespace definition</strong> begins with the keyword namespace followed by the namespace name.Following the namespace name is a block of declarations and definitions delimited by curly braces. Any declaration that can appear at global scope can be put into a namespace.</p>
+<p>Names defined in a namespace may be accessed directly by other members of the namespace. Code outside the namespace must <strong>indicate</strong> the namespace in which the name is defined:</p>
+<pre><code>student_A::id = ...
+cout &lt;&lt; student_A::grade;
+cout &lt;&lt; student_A::name;
+// ...
+</code></pre>
+
+<p>Besides, we can write a using declaration to obtain direct access to names we know we'll use frequently: <code>using student_A::name</code> to use namespace student_A member name from outside the namespace.</p>
+<h3>Expressions</h3>
+<p>C++ provides a number of operators and defines what these operators do when applied to operands of built-in type.</p>
+<p>Let's have a look at these operators!</p>
+<p><strong>Arithmetic operators</strong></p>
+<blockquote>
+<p>Operator	Function Use</p>
+<p>&quot;+&quot; unary plus + expr </p>
+<p>&quot;-&quot; unary minus - expr </p>
+<p>&quot;*&quot; multiplication expr * expr </p>
+<p>&quot;/&quot; division  expr / expr </p>
+<p>&quot;%&quot; remainder  expr % expr </p>
+<p>&quot;+&quot; addition expr + expr </p>
+<p>&quot;-&quot; subtraction expr - expr </p>
+</blockquote>
+<pre><code>#include&lt;iostream&gt;
+using std::cout;
+using std::endl;
+/* function main begins program execution */
+int main()
+{
+    int integer1 = 1;
+    int integer2 = 1;
+    int result;
+    result = +integer1;
+    cout &lt;&lt; result &lt;&lt; endl;
+    result = -integer1;
+    cout &lt;&lt; result &lt;&lt; endl;
+    result = integer1 + integer2;
+    cout &lt;&lt; result &lt;&lt; endl;
+    result = integer1 - integer2;
+    cout &lt;&lt; result &lt;&lt; endl;
+    result = integer1 * integer2;
+    cout &lt;&lt; result &lt;&lt; endl;
+    result = integer1 / integer2;
+    cout &lt;&lt; result &lt;&lt; endl;
+    result = integer1 % integer2;
+    cout &lt;&lt; result &lt;&lt; endl;
+}  /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>1
+-1
+2
+0
+1
+1
+0
+</code></pre>
+
+<p><strong>Relational and logical operators</strong></p>
+<blockquote>
+<p>Operator Function Use</p>
+<p>&quot;!&quot; logical NOT !expr</p>
+<p>&quot;&lt;&quot; less than expr &lt; expr</p>
+<p>&quot;&lt;=&quot; less than or equal expr &lt;= expr</p>
+<p>&quot;&gt;&quot;  greater than expr expr</p>
+<p>&quot;&gt;=&quot;  greater than or equal expr &gt;= expr</p>
+<p>&quot;==&quot;  equality expr == expr</p>
+<p>&quot;!=&quot; inequality expr != expr</p>
+<p>&quot;&amp;&amp;&quot; logical AND expr &amp;&amp; expr</p>
+<p>&quot;||&quot; logical OR expr || expr</p>
+</blockquote>
+<pre><code>#include &quot;stdafx.h&quot;
+#include&lt;iostream&gt;
+using std::cout;
+using std::endl;
+/* function main begins program execution */
+int main()
+{
+    bool bool1 = true;  /* value 1 means true */
+    bool bool2 = false;  /* value 0 means false */
+    bool result;
+    result = !bool1;
+    cout &lt;&lt; result &lt;&lt; endl;
+    result = bool1 &lt; bool2;
+    cout &lt;&lt; result &lt;&lt; endl;
+    result = bool1 &gt; bool2;
+    cout &lt;&lt; result &lt;&lt; endl;
+    result = bool1 == bool2;
+    cout &lt;&lt; result &lt;&lt; endl;
+    result = bool1 &amp;&amp; bool2;
+    cout &lt;&lt; result &lt;&lt; endl;
+    result = bool1 || bool2;
+    cout &lt;&lt; result &lt;&lt; endl;
+}  /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>0
+0
+1
+0
+0
+1
+</code></pre>
+
+<p><strong>Other operators</strong></p>
+<pre><code>#include&lt;iostream&gt;
+using std::cout;
+using std::endl;
+/* function main begins program execution */
+int main()
+{
+    int integer1 = 1;
+    int integer2 = 1;
+    int result;
+    int* adress; /* adress of an object of type int */
+    result = integer1++; /* the postfix increment, which increments its operand but yields a copy of the original,
+unchanged value as its result */
+    cout &lt;&lt; result &lt;&lt; &quot; &quot; &lt;&lt; integer1 &lt;&lt; endl;
+    result = integer1--; /* the postfix decrement
+operates similarly, except that it decrements its operand */
+    cout &lt;&lt; result &lt;&lt; &quot; &quot; &lt;&lt; integer1 &lt;&lt; endl;
+    result = ++integer1; /* the prefix increment, which
+increments its operand and yields the changed value as its result */
+    cout &lt;&lt; result &lt;&lt; &quot; &quot; &lt;&lt; integer1 &lt;&lt; endl;
+    result = --integer1; /* the prefix decrement
+operates similarly, except that it decrements its operand*/
+    cout &lt;&lt; result &lt;&lt; &quot; &quot; &lt;&lt; integer1 &lt;&lt; endl;
+    adress = &amp;integer1; /* the &amp; operator figures the memory number stored in computer */
+    cout &lt;&lt; adress &lt;&lt; endl;
+    result = (integer1 &gt; integer2) ? integer1 : integer2; /* the conditional operator ?: */
+    cout &lt;&lt; result &lt;&lt; endl;
+}  /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>1 2
+2 1
+2 2
+1 1
+0113F868
+1
+</code></pre>
+
+<p>The <strong>conditional operator</strong>(?:) is the only ternary operator in C++. It allows us to embed simple if-else tests inside an expression. The conditional operator has the following syntactic form</p>
+<pre><code>cond ? expr1 : expr2;
+</code></pre>
+
+<p>where <strong>cond</strong> is an expression that is used as a condition. The operator executes by evaluating <strong>cond</strong>. If <strong>cond</strong> evaluates to 0, then the condition is false; any other value is true. <strong>cond</strong> is always evaluated. If it is true, then <strong>expr1</strong> is evaluated; otherwise, <strong>expr2</strong> is evaluated.</p>
+<p>An <strong>expression</strong> is composed of one or more operands that are combined by operators. The simplest form of an expression consists of a single literal constant or variable. More complicated expressions are formed from an operator and one or more operands.</p>
+<p>Every expression yields a result. In the case of an expression with no operator, the result is the operand itself.The result of expressions that involve operators is determined by applying each operator to its operand(s).</p>
+<p>Let's have a try to evaluate some <strong>compond expressions</strong>.</p>
+<pre><code>#include&lt;iostream&gt;
+using std::cout;
+using std::endl;
+/* function main begins program execution */
+int main()
+{
+    cout &lt;&lt; 6 + 3 * 4 / 2 + 2 &lt;&lt; endl;
+    int temp = 3 * 4;
+    cout &lt;&lt; temp &lt;&lt; endl;
+    cout &lt;&lt; ((6 + ((3 * 4) / 2)) + 2) &lt;&lt; endl;
+    int ival = 0, jval = 1, kval = 2, lval = 3;
+    ival = jval = kval = lval; /* right associative */
+    cout &lt;&lt; ival &lt;&lt; &quot; &quot; &lt;&lt; jval &lt;&lt; &quot; &quot; &lt;&lt; kval &lt;&lt; &quot; &quot; &lt;&lt; lval &lt;&lt; endl;
+    int result = ival * jval / kval * lval; /* left associative */
+    cout &lt;&lt; result &lt;&lt; endl;
+}  /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>14
+12
+14
+3 3 3 3
+9
+</code></pre>
+
+<p>An expression with two or more operators is a <strong>compound expression</strong>. In a compound expression, the way in which the operands are grouped to the operators may determine the result of the overall expression. If the operands group in one way, the result differs from what it would be if they grouped another way. <strong>Precedence</strong> and <strong>associativity</strong> determine how the operands are grouped.</p>
+<p><strong>Operator Precedence and Associativity table</strong></p>
+<h3>Statements</h3>
+<p>In C++ there are <strong>simple statements</strong> that execute a single task and compound statements that consist of a block of statements that execute as a unit. An expression, such as <code>ival + 5</code>, becomes an expression statement by following it with a semicolon. <strong>Expression statements</strong> cause the expression to be evaluated.
+Defining or declaring an object or a class is a statement.( <code>int integer;</code> ) <strong>Definition statements</strong> are usually referred to as declaration statements although definition statement might be more accurate.
+A <strong>compound statement</strong>, usually referred to as a block, is a (possibly empty) sequence of statements surrounded by a pair of curly braces.</p>
+<pre><code>{
+    int integer1;
+    integer1 = 0;
+    cout &lt;&lt; integer1 &lt;&lt; endl;
+}  /* a compound statement */
+</code></pre>
+
+<p>An <strong>if statement</strong> conditionally executes another statement based on whether a specified expression is true.</p>
+<pre><code>if (condition statement)
+    another statement
+</code></pre>
+
+<p>if condition statement is true, the another statement will be executed, or it will not be executed.</p>
+<p>Another form of <strong>if statement</strong></p>
+<pre><code>if (condition statement)
+    statement1;
+else 
+    statement2;
+</code></pre>
+
+<p>if condition statement is true, the statement1 will be executed, or the statement2 will be executed.</p>
+<p>We can use the <strong>if statement</strong> to solve some problem.</p>
+<pre><code>#include&lt;iostream&gt;
+using std::cout;
+using std::endl;
+/* function main begins program execution */
+int main()
+{
+    int number1, number2, the_largest_number;
+    number1 = 95;
+    number2 = 100;
+    if (number1 &gt; number2) /* we use the if statement to find the largest number */
+    {
+        the_largest_number = number1;
+    } else { 
+        the_largest_number = number2;
+    }
+    cout &lt;&lt; the_largest_number &lt;&lt; endl;
+}  /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>100
+</code></pre>
+
+<p>Occasionally, an algorithm will contain a series of decisions in which a variable or expression is tested separately for each of the constant values it may assume, and different actions are taken. C++ provides the <strong>switch statement</strong> to handle such decision making.</p>
+<pre><code>#include &lt;iostream&gt;
+using std::cin;
+using std::cout;
+using std::endl;
+/* function main begins program execution */
+int main()
+{
+    char sex;
+    cin &gt;&gt; sex;
+    switch (sex) { /* switch sex, f means girl while m means boy */
+        case 'm':
+            cout &lt;&lt; &quot;The baby is a boy!&quot; &lt;&lt; endl;
+            break; /* necessary to exit switch */
+
+        case 'f':
+            cout &lt;&lt; &quot;The baby is a girl!&quot; &lt;&lt; endl;
+            break; /* exit switch */
+
+        default: /* catch all other characters */
+            cout &lt;&lt; &quot;Incorrect letter entered.&quot; &lt;&lt; endl;
+            break; /* optional; will exit switch anyway */
+    } /* end switch */
+
+    return 0; /* indicate program ended successfully */
+
+} /* end function main */
+</code></pre>
+
+<p>The input screen</p>
+<pre><code>f
+</code></pre>
+
+<p>The corresponding output screen</p>
+<pre><code>The baby is a girl!
+</code></pre>
+
+<p>The form of <strong>switch statement</strong></p>
+<pre><code>switch (condition) {
+    case value1:
+        statement1;
+        break;
+    case value2:
+        statement2;
+        break;
+    ...
+    default:
+        statement;
+        break;
+} /* end switch */
+</code></pre>
+
+<p>A <strong>while statement</strong> repeatedly executes a target statement as long as a condition is true.
+The form of <strong>while statement</strong></p>
+<pre><code>while (condition)
+    statement
+</code></pre>
+
+<p>We can use the <strong>while statement</strong> to solve some problem.</p>
+<pre><code>#include &lt;iostream&gt;
+using std::cout;
+using std::endl;
+/* function main begins program execution */
+int main()
+{
+    int tot = 10;
+    while (tot &gt; 0)
+        cout &lt;&lt; tot-- &lt;&lt; endl;
+} /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+</code></pre>
+
+<p>The <strong>for loop statement</strong> </p>
+<pre><code>for (initializer; condition; expression)
+    statement
+</code></pre>
+
+<p>In general, the <strong>init-statement</strong> is used to initialize or assign a starting value that is modified over the course of the loop. The <strong>condition</strong> serves as the loop control. As long as condition evaluates as true, statement is executed. After executing statement, expression will be executed and then the program will go back to the condition again. When the condition is false, the for loop will be terminated.</p>
+<p>We can use <strong>for loop statement</strong> to solve some problem.</p>
+<pre><code>#include &lt;iostream&gt;
+using std::cout;
+using std::endl;
+/* function main begins program execution */
+int main()
+{
+    int total = 0;
+    int i;
+    for (i = 0; i &lt; 10; i++)
+    {
+        total++;
+    } /* use the for loop statement to do increment */
+    cout &lt;&lt; total &lt;&lt; endl;
+} /* end function main */
+</code></pre>
+
+<p>The outpur screen</p>
+<pre><code>10
+</code></pre>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

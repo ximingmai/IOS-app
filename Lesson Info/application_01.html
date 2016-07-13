@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>application_01</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Introduction to C++ programming</h1>
+<p><strong>C++</strong> uses some <strong>notations</strong> that may appear strange to people who have not programmed computers. We begin by considering a simple C++ program. Our first example prints <strong>a line of text</strong>. The program and the program's screen output are shown as following.</p>
+<pre><code>/* A first program in C++ */
+#include&lt;iostream&gt;
+using namespace std;
+/* function main begins program execution */
+int main()
+{
+    cout &lt;&lt; &quot;Welcome to C++!\n&quot;;
+    return 0;
+}  /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>Welcome to C++!
+</code></pre>
+
+<p>This simple program illustrates several important features of the C++.</p>
+<h3>Comments</h3>
+<pre><code>/* A first program in C++ */
+</code></pre>
+
+<p>A sentence or a paragraph begins with /* and end with */ indicating that it is a comment. Comments are ignored by the C++ compiler and do not cause the computer to perform any action when the program is run. You can use comments to help other people read and understand your program.</p>
+<p>There is also another form of comments. </p>
+<pre><code>//  I am a single-line comment.
+</code></pre>
+
+<p>A single-line comment starts with a double slash (//). Everything to the right of the slashes on the current line is a comment and ignored by the compiler.</p>
+<h3>Preprocessor</h3>
+<pre><code>#include&lt;iostream&gt;
+</code></pre>
+
+<p>It is a directive to the C++ preprocessor. Lines beginning with # are processed by the preprocessor before the program is compiled. The <strong>#include</strong> <em>preprocessor directive</em> causes a copy of a specified file to be included in place of the directive. The two forms of the #include directive are </p>
+<pre><code>#include&lt;filename&gt;
+#include&quot;filename&quot;
+</code></pre>
+
+<p>If the file name is enclosed in quotes, the preprocessor searches in the same directory as the file being compiled for the file to be included. This method is normally used to include programmer-defined headers. If the file name is enclosed in angle brackers -used for <em>standard library headers</em>- the search is performed in an implementation-dependent manner, normally through predesignated directories. There are also many other <em>preprocessor directive</em>.</p>
+<pre><code>#define PI 3.14159
+#define CIRCLE_AREA( x ) ( ( PI ) * ( x ) * ( x ) )
+</code></pre>
+
+<p>The first <strong>#define</strong> <em>directive</em> replaces PI with the numeric constant 3.14159. While the second one means that wherever CIRCLE_AREA( y ) appears in the file, the value of y is substituted for x in the right part <code>( (PI) * ( x ) * ( x ) )</code>, PI is replaced by its value (defined previously) and the <code>CIRCLE_AREA( y )</code> is expanded in the program. For example, the statement</p>
+<pre><code>area = CIRCLE_AREA( 4 );
+</code></pre>
+
+<p>is expanded to</p>
+<pre><code>area = ( ( 3.14159 ) * ( 4 ) * ( 4 ));
+</code></pre>
+
+<h3>using declarations</h3>
+<pre><code>using namespace std;
+</code></pre>
+
+<p>A using declaration has the following form:</p>
+<pre><code>using namespace::name;
+or
+using namespace_name;
+</code></pre>
+
+<p>In C++, namespace has its own region. When we should use some standard function. We should use using declarations. Now, you just need remember add <code>using namespace_name</code> to your program, you will know about what is namespace and why we should use using namespace in the following study.</p>
+<h3>Function</h3>
+<pre><code>int main()
+</code></pre>
+
+<p>is a part of every C++ program. The parentheses after main indicate that main is a program building block called a <em>function</em>. C++ programs contain one or more functions, one of which must be main. Every program in C++ begins executing at the function main.</p>
+<h3>Statement</h3>
+<pre><code>std::cout &lt;&lt; &quot;Welcome to C++!\n&quot;;
+</code></pre>
+
+<p>instructs the computer to perform an action, namely to print on the screen the <em>string</em> of characters marked by the quotation marks. A string is sometimes called a <em>character string</em>, a <em>message</em> or a <em>literal</em>. The entire line, including <em>std::cout</em>, its <em>argument</em> within the parentheses and the semicolon(;), is called a <em>statement</em>. Every statement must end with a semicolon(also known as the statement terminator).</p>
+<pre><code>return 0;
+</code></pre>
+
+<p>This <em>statement</em> is included at the end of every <strong>main</strong> function. The keyword <strong>return</strong> is one of several means we will use to <em>exit a function</em>. When the return statement is used at the end of <strong>main</strong> as shown here, the value 0 indicates that the program has terminated successfully.</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

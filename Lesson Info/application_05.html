@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>application_05</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>C++ Operator overloading</h1>
+<p>C++ defines a large number of operators and automatic conversions among the built-in types. These facilities allow programmers to write a rich set of mixed-type expressions. Besides, C++ lets us redefine the meaning of the operators when applied to objects of class type. It also lets us define conversion operations for class types.</p>
+<p><strong>Overloaded operators</strong> are functions with special names: the <strong>keyword operator</strong> followed by the <strong>symbol</strong> for the operator being defined. Like any other function, an overloaded operator has a return type and a parameter list.</p>
+<pre><code>return_type operator symbol(parameter list);
+</code></pre>
+
+<p>It is a form of overloaded operator function prototype.</p>
+<p>We can overload almost all of the operators in C++ except some special operator like '?:' .</p>
+<blockquote>
+<p>Overloadable Operators</p>
+<pre><code> +     -    *     /         %         ^
+ &amp;     |    ~     !         ,         =
+ &lt;     &gt;    &lt;=    &gt;=       ++        --
+&lt;&lt;    &gt;&gt;    ==    !=       &amp;&amp;        ||
++=    -=    /=    %=       ^=        &amp;=
+|=    *=    &lt;&lt;=   &gt;&gt;=      []        ()
+-&gt;   -&gt;*    new   new[]   delete   delete[]
+</code></pre>
+
+<p>Operators That Cannot Be Overloaded</p>
+<pre><code>::     .*    .     ?:
+</code></pre>
+
+</blockquote>
+<p>Let's have a try to overload some simple opeartors!</p>
+<pre><code>class complex_number {
+public:
+    complex_number operator+(const complex_number&amp; another_number) {
+        return complex_number (real + another_number.real, imag + another_number.imag);
+    }
+    complex_number&amp; operator+=(const complex_number&amp; another_number) {
+        real += another_number.real;
+        imag += another_number.imag;
+        return *this;
+    }
+    bool operator==(const complex_number&amp; another_number) {
+        return (real == another_number.real) &amp;&amp; (imag == another_number.imag);
+    }
+    complex_number(int real, int imag) {
+        this-&gt;real = real;
+        this-&gt;imag = imag;
+    }
+private:
+    int real, imag;
+};
+</code></pre>
+
+<p>We can use an overloaded operator in the same way that we'd use the operator on operands of built-in type.</p>
+<pre><code>complex_number number1(1, 2);
+complex_number number2(2, 3);
+complex_number result(0, 0);
+result = number1 + number2;
+number1 += number2;
+bool compare = (number1 == number2);
+</code></pre>
+
+<p><strong>input and output overloading</strong></p>
+<p>Classes often make the IO operators friends.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+class complex_number {
+public:
+    complex_number(int real, int imag) {
+        this-&gt;real = real;
+        this-&gt;imag = imag;
+    }
+    friend ostream&amp; operator &lt;&lt; (ostream&amp;, const complex_number&amp;);
+    friend istream&amp; operator &gt;&gt; (istream&amp;, complex_number&amp;);
+private:
+    int real, imag;
+};
+
+ostream&amp; operator &lt;&lt; (ostream&amp; out, const complex_number&amp; number)
+{
+    out &lt;&lt; number.real;
+    if (number.imag &gt; 0) {
+        out &lt;&lt; '+' &lt;&lt; number.imag &lt;&lt; 'j' &lt;&lt; endl;
+    } else if (number.imag &lt; 0) {
+        out &lt;&lt; '-' &lt;&lt; number.imag &lt;&lt; 'j' &lt;&lt; endl;
+    } else {
+        out &lt;&lt; endl;
+    }
+    return out;
+}
+
+istream&amp; operator &gt;&gt; (istream&amp; in, complex_number&amp; number)
+{
+    in &gt;&gt; number.real &gt;&gt; number.imag;
+    return in;
+}
+/* function main begins program execution */
+int main()
+{
+    complex_number number(1, 2);
+    cout &lt;&lt; number;
+    cin &gt;&gt; number;
+    cout &lt;&lt; number;
+
+} /* end function main */
+</code></pre>
+
+<p>The input screen </p>
+<pre><code>3 5
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>1+2j
+3+5j
+</code></pre>
+
+<p><strong>Assignment operator</strong></p>
+<p>The class assignment operator takes a parameter that is the class type. Usually the parameter is a const reference to the class type. This operator will be synthesized by the compiler if we do not define it ourselves.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+class complex_number {
+public:
+    complex_number(int real, int imag) {
+        this-&gt;real = real;
+        this-&gt;imag = imag;
+    }
+    explicit complex_number(const complex_number&amp; another_number) { *this = another_number; }
+    complex_number&amp; operator = (const complex_number&amp;);
+    friend ostream&amp; operator &lt;&lt; (ostream&amp;, const complex_number&amp;);
+private:
+    int real, imag;
+};
+
+ostream&amp; operator &lt;&lt; (ostream&amp; out, const complex_number&amp; number)
+{
+    out &lt;&lt; number.real;
+    if (number.imag &gt; 0) {
+        out &lt;&lt; '+' &lt;&lt; number.imag &lt;&lt; 'j' &lt;&lt; endl;
+    }
+    else if (number.imag &lt; 0) {
+        out &lt;&lt; '-' &lt;&lt; number.imag &lt;&lt; 'j' &lt;&lt; endl;
+    }
+    else {
+        out &lt;&lt; endl;
+    }
+    return out;
+}
+
+complex_number&amp; complex_number::operator = (const complex_number&amp; another_number) {
+    this-&gt;real = another_number.real;
+    this-&gt;imag = another_number.imag;
+    return *this;
+}
+/* function main begins program execution */
+int main()
+{
+    complex_number number1(1, 2);
+    complex_number number2(3, 4);
+    cout &lt;&lt; number1 &lt;&lt; number2 &lt;&lt; endl;
+    number1 = number2;
+    cout &lt;&lt; number1 &lt;&lt; number2 &lt;&lt; endl;
+} /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>1+2j
+3+4j
+
+3+4j
+3+4j
+</code></pre>
+
+<h2>Exception Handling</h2>
+<p>Exceptions are run-time anomalies, such as running out of memory or encountering unexpected input. Exceptions exist outside the normal functioning of the program and require immediate handling by the program.</p>
+<p>Exceptions support this kind of communication between the error-detecting and error-handling parts of a program. In C++ exception handling involves:</p>
+<blockquote>
+<ol>
+<li>
+<p>tHRow expressions, which the error-detecting part uses to indicate that it encountered an error that it cannot handle. We say that a throw raises an exceptional condition.</p>
+</li>
+<li>
+<p>try blocks, which the error-handling part uses to deal with an exception. A TRy block starts with keyword TRy and ends with one or more catch clauses. Exceptions thrown from code executed inside a try block are usually handled by one of the catch clauses. Because they &quot;handle&quot; the exception, catch clauses are known as handlers.</p>
+</li>
+<li>
+<p>A set of exception classes defined by the library, which are used to pass the information about an error between a throw and an associated catch.</p>
+</li>
+</ol>
+</blockquote>
+<p>An exception is thrown using a throw expression, which is usually followed by a semicolon, making it into an expression statement.</p>
+<pre><code>throw object;
+</code></pre>
+
+<p>A TRy block begins with the keyword try followed by a block enclosed in braces. Following the TRy block is a list of one or more catch clauses. A catch clause consists of three parts: the keyword catch, the declaration of a single type or single object within parentheses (referred to as an exception specifier), and a block, which as usual must be enclosed in curly braces.</p>
+<pre><code>try {
+program_statements
+} catch (exception_specifier) {
+handler_statements
+} catch (exception_specifier) {
+handler_statements
+}
+</code></pre>
+
+<p>If the catch clause is selected to handle an exception, the associated block is executed. Once the catch clause finishes, execution continues with the statement immediately following the last catch clause.</p>
+<p>The program-statements inside the TRy constitute the normal logic of the program. They can contain any C++ statement, including declarations. Like any block, a TRy block introduces a local scope, and variables declared within a try block cannot be referred to outside the try, including within the catch clauses.</p>
+<p>The C++ library defines a set of classes that it uses to report problems encountered in the functions in the standard library. These standard exception classes are also intended to be used in the programs we write.</p>
+<blockquote>
+<p><strong>Standard Exception Classes Defined in <stdexcept></strong></p>
+<p>exception The most general kind of problem.</p>
+<p>runtime_error Problem that can be detected only at run time.</p>
+<p>range_error Run-time error: result generated outside the range of values that are meaningful.</p>
+<p>overflow_error Run-time error: computation that overflowed.</p>
+<p>underflow_error Run-time error: computation that underflowed.</p>
+<p>logic_error Problem that could be detected before run time.</p>
+<p>domain_error Logic error: argument for which no result exists.</p>
+<p>invalid_argument Logic error: inappropriate argument.</p>
+<p>length_error Logic error: attempt to create an object larger than the maximum size for that type.</p>
+<p>out<em>of</em>range Logic error: used a value outside the valid range.</p>
+</blockquote>
+<pre><code>#include &lt;iostream&gt;
+#include&lt;stdexcept&gt;
+using namespace std;
+
+/* the complex number class */
+class complex_number {
+public:
+    /* the constructor function */
+    complex_number(int real, int imag) {
+        this-&gt;real = real;
+        this-&gt;imag = imag;
+    }
+    /* the copy constructor function*/
+    explicit complex_number(const complex_number&amp; another_number) { *this = another_number; }
+    /* the opeartor!= overloaded function */
+    bool operator!=(const complex_number&amp; another_number) {
+        if ((this-&gt;real == another_number.real) &amp;&amp; (this-&gt;imag == another_number.imag)) return false;
+        else return true;
+    }
+    /* the output overloaded function */
+    friend ostream&amp; operator &lt;&lt; (ostream&amp;, const complex_number&amp;);
+private:
+    int real, imag;
+};
+
+ostream&amp; operator &lt;&lt; (ostream&amp; out, const complex_number&amp; number)
+{
+    out &lt;&lt; number.real;
+    if (number.imag &gt; 0) {
+        out &lt;&lt; '+' &lt;&lt; number.imag &lt;&lt; 'j' &lt;&lt; endl;
+    }
+    else if (number.imag &lt; 0) {
+        out &lt;&lt; '-' &lt;&lt; number.imag &lt;&lt; 'j' &lt;&lt; endl;
+    }
+    else {
+        out &lt;&lt; endl;
+    }
+    return out;
+}
+
+/* function main begins program execution */
+int main()
+{
+    complex_number number1(1, 2);
+    complex_number number2(3, 4);
+    cout &lt;&lt; number1 &lt;&lt; number2 &lt;&lt; endl;
+    /* the exception handling */
+    try {
+        if (number1 != number2) throw exception(); /* throw a standard exception */
+    }
+    catch (exception e) {  /* catch the exception */
+        cout &lt;&lt; &quot;The two complex number are not equal to each other!&quot; &lt;&lt; endl;
+    }
+    cout &lt;&lt; number1 &lt;&lt; number2 &lt;&lt; endl;
+} /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>1+2j
+3+4j
+
+The two complex number are not equal to each other!
+1+2j
+3+4j
+</code></pre>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

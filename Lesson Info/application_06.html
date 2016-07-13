@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>application_06</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Templates and Generic Programming</h1>
+<p>Generic programming involves writing code in a way that is independent of any particular type. Templates are the foundation of generic programming. We can, and have, used templates without understanding how they are defined.</p>
+<p>A template is a blueprint or formula for creating a class or a function. For example, the standard library defines a single class template that defines what it means to be a vector. That template is used to generate any number of type-specific vector classesfor example, vector<int> or vector<string>.</p>
+<p><strong>function template</strong>
+A function template is a type-independent function that is used as a formula for generating a type-specific version of the function.</p>
+<pre><code>/* a template function returns 0 if the values are equal, 1 if v1 is larger, -1 if v1 is smaller */
+template &lt;typename T&gt;
+int compare(const T &amp;v1, const T &amp;v2)
+{
+    if (v1 &lt; v2) return -1;
+    if (v2 &lt; v1) return 1;
+    return 0;
+}
+</code></pre>
+
+<p>A template <strong>definition</strong> starts with the keyword <strong>template</strong> followed by a <strong>template parameter list</strong>, which is a comma-separated list of one or more template parameters bracketed by the less-than (&lt;) and greater-than (&gt;) tokens.</p>
+<p>The template parameter list acts much like a function parameter list. Template parameters represent types or values we can use in the definition of a class or function. For example, our compare function declares one type parameter named T. Inside compare, we can use the name T to refer to a type. Which actual type T represents is determined by the compiler based on how the function is used.</p>
+<p>A template parameter can be a type parameter, which represents a type, or a nontype parameter, which represents a constant expression. A nontype parameter is declared following a type specifier. A type parameter is defined following the keyword class or typename. For example, class T is a type parameter named T.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+/* a template function returns 0 if the values are equal, 1 if v1 is larger, -1 if v1 is smaller */
+template &lt;typename T&gt;
+int compare(const T &amp;v1, const T &amp;v2)
+{
+    if (v1 &lt; v2) return -1;
+    if (v2 &lt; v1) return 1;
+    return 0;
+}
+
+/* function main begins program execution */
+int main()
+{
+    /* T is int;
+     compiler instantiates int compare(const int&amp;, const int&amp;) */
+    cout &lt;&lt; compare(1, 0) &lt;&lt; endl;
+    /* T is string;
+     compiler instantiates int compare(const string&amp;, const string&amp;) */
+    string s1 = &quot;hi&quot;, s2 = &quot;world&quot;;
+    cout &lt;&lt; compare(s1, s2) &lt;&lt; endl;
+    return 0;
+} /* end function main */
+</code></pre>
+
+<p>When we use a function template, the compiler infers what template argument(s) to bind to the template parameter(s). Once the compiler determines the actual template argument(s), it instantiates an instance of the function template for us. Essentially, the compiler figures out what type to use in place of each type parameter and what value to use in place of each nontype parameter.</p>
+<p><strong>class template</strong></p>
+<p>Just as we can define function templates, we can also define class templates.</p>
+<pre><code>template &lt;class Type&gt;
+class Queue {
+public:
+    Queue (); // default constructor
+    Type &amp;front (); // return element from head of Queue
+    const Type &amp;front () const;
+    void push (const Type &amp;); // add element to back of Queue
+    void pop(); // remove element from head of Queue
+    bool empty() const; // true if no elements in the Queue
+    private:
+    // ...
+};
+</code></pre>
+
+<p>A class template is a template, so it must begin with the keyword template followed by a template parameter list. Our Queue template takes a single template type parameter named Type. In the definition of the class and its members, we can use the template parameters as stand-ins for types or values that will be supplied when the class is used. For example, our Queue template has one template type parameter. We can use that parameter anywhere a type name can be used.</p>
+<pre><code>#include &lt;iostream&gt;
+
+using std::cin;
+using std::cout;
+using std::endl;
+
+/* the template class Arithmetic to do some math problem */
+template&lt; typename T &gt;
+class Arithmetic {
+public:
+    Arithmetic(T, T);
+    T addition() const;
+    T subtraction() const;
+    T multiplication() const;
+    T division() const;
+private:
+    T value1;
+    T value2;
+};
+
+/* the implement of the member functions */
+template&lt; typename T &gt;
+Arithmetic&lt; T &gt;::Arithmetic(T v1, T v2) {
+    value1 = v1;
+    value2 = v2;
+}
+
+template&lt; typename T &gt;
+T Arithmetic&lt; T &gt;::addition() const {
+    return value1 + value2;
+}
+
+template&lt; typename T &gt;
+T Arithmetic&lt; T &gt;::subtraction() const {
+    return value1 - value2;
+}
+
+template&lt; typename T &gt;
+T Arithmetic&lt; T &gt;::multiplication() const {
+    return value1 * value2;
+}
+
+template&lt; typename X &gt;
+X Arithmetic&lt; X &gt;::division() const {
+    return value1 / value2;
+}
+
+template&lt; typename T &gt;
+void printResult(T number) {
+    cout &lt;&lt; &quot;The result of the operation is: &quot; &lt;&lt; number &lt;&lt; endl;
+}
+
+/* function main begins program execution */
+int main() {
+    Arithmetic&lt; int &gt; a(5, 3);
+    Arithmetic&lt; double &gt; b(7.3, 5.2);
+
+    cout &lt;&lt; &quot;Arithmetic performed on object a:\n&quot;;
+    printResult(a.addition());
+    printResult(a.subtraction());
+    printResult(a.multiplication());
+    printResult(a.division());
+
+    cout &lt;&lt; &quot;\nArithmetic performed on object b:\n&quot;;
+    printResult(b.addition());
+    printResult(b.subtraction());
+    printResult(b.multiplication());
+    printResult(b.division());
+} /* end function main */
+</code></pre>
+
+<p>The definition of a member function of a class template has the following form:</p>
+<pre><code>template&lt; typename X &gt;
+X Arithmetic&lt; X &gt;::division() const {
+    return value1 / value2;
+}
+</code></pre>
+
+<blockquote>
+<p>It must start with the keyword template followed by the template parameter list for
+the class.</p>
+<p>It must indicate the class of which it is a member.</p>
+<p>The class name must include its template parameters.</p>
+</blockquote>
+<p>The form of the implement:</p>
+<pre><code>template &lt;class T&gt; 
+return_type template_class&lt;T&gt;::member-name(parameters_list)
+{ function body }
+</code></pre>
+
+<p>In contrast to calling a function template, when we use a class template, we must explicitly specify arguments for the template parameters. The compiler uses the arguments to instantiate a type-specific version of the class. Essentially, the compiler rewrites our Queue class replacing Type by the specified actual type provided by the user.</p>
+<pre><code>/* the instantiation of Queue */
+Queue&lt;int&gt; qi; // Queue that holds ints
+Queue&lt; vector&lt;double&gt; &gt; qc; // Queue that holds vectors of doubles
+Queue&lt;string&gt; qs; // Queue that holds strings
+
+    /* the instantiation of Arithmetic */
+    Arithmetic&lt; int &gt; a(5, 3);
+    Arithmetic&lt; double &gt; b(7.3, 5.2);
+</code></pre>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

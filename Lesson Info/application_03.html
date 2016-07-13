@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>application_03</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Foundation of C++_02</h1>
+<h3>Functions</h3>
+<p>A function can be thought of as a programmer-defined operation. Like the built-in operators, each function performs some computation and (usually) yields a result.</p>
+<pre><code>#include &lt;iostream&gt;
+using std::cout;
+using std::endl;
+/* function function_name print a string on the screen and return a integer */
+int function_name(int function_parameters)
+{
+    cout &lt;&lt; &quot;Hello! I am a function!&quot; &lt;&lt; endl;
+    return function_parameters;
+} /* end function function_name */
+
+/* function main begins program execution */
+int main()
+{
+    int result;
+    result = function_name(1);  /* call operator */
+    cout &lt;&lt; result &lt;&lt; endl;
+    return 0;
+} /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>Hello! I am a function!
+1
+</code></pre>
+
+<p>A function is uniquely represented by a <strong>return type</strong><code>int</code>(return type can be <strong>void</strong> which means that the function does not return a value), a <strong>name</strong><code>function_name</code>, a set of <strong>operand types</strong><code>int function_parameters</code> and a <strong>function body</strong>. Its operands, referred to as <strong>parameters</strong>, are specified in a comma-separated list enclosed in parentheses. The actions that the function performs are specified in a block, referred to as the <strong>function body</strong>. Every function has an associated <strong>return type</strong>.</p>
+<pre><code>result = function_name(1);
+</code></pre>
+
+<p>To invoke a function we use the <strong>call operator</strong>, which is a pair of parentheses. As with any operator, the call operator takes operands and yields a result. The operands to the call operator are the name of the function and a (possibly empty) comma-separated list of arguments. The result type of a call is the <strong>return type</strong> of the called function, and the result itself is the <strong>value returned by the function</strong>.</p>
+<pre><code>return_type function_name(parameter1_type function_parameter1, parameter2_type function_parameter2, ...) /* function head */
+
+function_name(argument1, argument2, ...); /* function call, pass the arguments to function */
+</code></pre>
+
+<p>We must pass exactly the <strong>same number</strong> of arguments as the function has parameters. The <strong>type</strong> of each argument must match the corresponding parameter. A <strong>parameter list</strong>(can be empty but cannot be omitted) consists of a comma-separated list of parameter types and (optional) parameter names. Even when the types of two parameters are the same, the type must be <strong>repeated</strong>.</p>
+<p>Just as variables must be declared before they are used, a function must be declared before it is called. As with a variable definition, we can declare a function separately from its definition; a function may be defined only once but may be declared multiple times.</p>
+<pre><code>return_type function_name(paremeter_list); /* function declaration */
+
+function_name(argument_list); /* function call */
+
+return_type function_name(parameter_list)
+    function body
+/* function definition */
+</code></pre>
+
+<p>A function <strong>declaration</strong> consists of a return type, the function name, and parameter list. The parameter list must contain the types of the parameters but need not name them. These three elements are referred to as the <strong>function prototype</strong>.</p>
+<p>Now, you have known about how to use a function, and let's have a try!</p>
+<pre><code>#include &lt;iostream&gt;
+using std::cout;
+using std::endl;
+
+/* function prototype */
+int what_is_the_largest_number(int, int)
+
+/* function main begins program execution */
+int main()
+{
+    int the_largest_number, number1 = 89, number2 = 100;
+    the_largest_number = what_is_the_largest_number(number1, number2);  /* call operator */
+    cout &lt;&lt; &quot;The largest number is: &quot; &lt;&lt; the_largest_number &lt;&lt; endl;
+    return 0;
+} /* end function main */
+
+/* function what_is_the_largest_number finds and returns the largest number */
+int what_is_the_largest_number(int number1,  int number2)
+{
+    if (number1 &gt; number2)
+        return number1;
+    else
+        return number2;
+} /* end function */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>The largest number is: 100
+</code></pre>
+
+<p>Functions bring us many benefits but calling a function is much slower than evaluating the equivalent expression and does a lot of work. Fortunately, <strong>inline function</strong> solve this problem. <strong>inline function</strong> (A function specified as inline (usually)) is expanded &quot;in line&quot; at each point in the program in which it is invoked.</p>
+<pre><code>/* inline function what_is_the_largest_number finds and returns the largest number */
+inline int what_is_the_largest_number(int number1,  int number2)
+{
+    return number1 &gt; number2 ? number1 : number2;
+} /* end function */
+
+the_largest_number = what_is_the_largest_number(number1, number2);  /* call operator */
+
+the_largest_number = (number1 &gt; number2 ? number1 : number2);  /* inline function is expanded in line during compilation */
+</code></pre>
+
+<p>We can define an <strong>inline function</strong> by specifying the keyword inline before the function's return type. Then the run-time overhead of making a function is thus removed.</p>
+<p>Two functions are <strong>overloaded</strong> if they have the same name but have different parameter lists. We can use it to perform the same general action but apply to different parameter types.</p>
+<pre><code>/* three function overloading */
+/* fine the largest integer number */
+int what_is_the_largest_number(int number1,  int number2)
+{
+    return number1 &gt; number2 ? number1 : number2
+}  /* end function */
+
+/* fine the largest double number */
+double what_is_the_largest_number(double number1,  double number2)
+{
+    return number1 &gt; number2 ? number1 : number2
+} /* end function */
+
+/* fine the largest float number */
+float what_is_the_largest_number(float number1,  float number2)
+{
+    return number1 &gt; number2 ? number1 : number2
+}  /* end function */
+</code></pre>
+
+<p>The compiler matches a call to a function automatically by comparing the actual arguments used in the call with the parameters offered by each function in the overload set.</p>
+<h3>Library IO</h3>
+<p>In C++, <strong>input/output</strong> is provided through the library. The library defines a family of types that support IO to and from devices such as files and console windows. Each of these IO types defines how to read and write values of the built-in data types.</p>
+<blockquote>
+<p><strong>IO Library Types and Headers</strong></p>
+<p><strong>Header</strong> <strong>Type</strong></p>
+<p><strong>iostream</strong></p>
+<pre><code>  istream reads from a stream
+  ostream writes to a stream
+  iostream reads and writes astream
+</code></pre>
+
+<p><strong>fstream</strong> </p>
+<pre><code>  ifstream, reads from a file
+  ofstream writes to a file
+  fstream, reads and writes a file
+</code></pre>
+
+<p><strong>sstream</strong></p>
+<pre><code>  istringstream reads from a string
+  ostringstream writes to a string
+  stringstream reads and writes a string
+</code></pre>
+
+<p>Let's have a try!</p>
+</blockquote>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+/* function tests iostream */
+void test_iostream()
+{
+    string a;
+    cin &gt;&gt; a;
+    cout &lt;&lt; &quot;I have a string: &quot; &lt;&lt; a &lt;&lt; endl;
+} /* end funciton */
+
+  /* function tests sstream */
+void test_sstream()
+{
+    stringstream ss;
+    string a;
+    cin &gt;&gt; a;
+    ss &lt;&lt; a;
+    cout &lt;&lt; &quot;I have a stringstream: &quot; &lt;&lt; ss.str() &lt;&lt; endl;
+} /* end funciton */
+
+/* function main begins program execution */
+int main()
+{
+    test_iostream();
+    test_sstream();
+    return 0;
+} /* end function main */
+</code></pre>
+
+<p>The input screen</p>
+<pre><code>string
+string
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>I have a string: string
+I have a stringstream: string
+</code></pre>
+
+<h3>Classes</h3>
+<p><strong>Class Type</strong></p>
+<p>In C++ we define our own data types by defining a <strong>class</strong>. A <strong>class</strong> defines the data that an object of its type contains and the operations(functions) that can be executed by objects of that type. The library types string, istream, and ostream are all defined as classes. The <strong>data</strong> and <strong>functions</strong> of a class are intimately tied together(<strong>encapsulation</strong>). A class like a blueprint. Out of a blueprint, a builder can build a house. Out of a class, a programmer can create an object. One blueprint can be reused many times to make many houses. One class can be reused many times to make many objects of the same class.</p>
+<p>Each class defines an <strong>interface</strong> and <strong>implementation</strong>. The interface consists of the operations that we expect code that uses the class to execute. The implementation typically includes the data needed by the class. The implementation also includes any functions needed to define the class but that are not intended for general use.</p>
+<p>When we define a class, we usually begin by defining its interfacethe operations that the class will provide. From those operations we can then determine what data the class will require to accomplish its tasks and whether it will need to define any functions to support the implementation.</p>
+<pre><code>class class_name {
+    class body
+};
+</code></pre>
+
+<p>A <strong>class definition</strong> starts with the <strong>keyword class</strong> followed by an <strong>identifier</strong> that names the class. The <strong>body</strong> of the class appears inside curly braces. The close curly must be followed by a <strong>semicolon</strong>.</p>
+<p>The <strong>class body</strong>, which can be empty, defines the data and operations that make up the type. The operations and data that are part of a class are referred to as its <strong>members</strong>. The operations are referred to as the <strong>member functions</strong> and the data as <strong>data members</strong>.</p>
+<p>The class also may contain zero or more <strong>public</strong>(the public section of a class defines members that can be accessed by any part of the program) or <strong>private</strong>(code that is not part of the class does not have access to the private members) <em>access labels</em>. An <strong>access label</strong> controls whether a member is accessible outside the class. Code that uses the class may access only the <strong>public members</strong>.</p>
+<p><strong>Class Data Members</strong></p>
+<pre><code>int class_data_int;
+double class_data_double;
+string class_data_string;
+</code></pre>
+
+<p>The data members of a class are defined in somewhat the same way that normal variables are defined. However, We ordinarily <strong>cannot initialize</strong> the members of a class as part of their definition. When we define the data members, we can only name them and say what types they have. The data members of a class define the contents of the <strong>objects</strong> of that class type. When we define objects of <strong>type class</strong>, those objects will contain an int, a double, and a string.</p>
+<p><strong>Class Member Functions</strong></p>
+<p>We define <strong>member functions</strong> similarly to how we define ordinary functions. As with any function, a member function consists of four parts:</p>
+<ul>
+<li>A return type for the function</li>
+<li>The function name</li>
+<li>A (possibly empty) comma-separated list of parameters</li>
+<li>The function body, which is contained between a pair of curly braces</li>
+</ul>
+<p>As we know, the first three of these parts constitute the <strong>function prototype</strong> and the function prototype must be defined within the class body. The body of the function, however, may be defined within the class itself or outside the class body.</p>
+<p>Now let's define a class!</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+/* define a class called Time */
+class Time {
+public:
+    /* the distructor is public */
+    ~Time() {}
+    /* the constructor is public */
+    Time(int, int, int);
+    /* the setTime function prototype */
+    void setTime(int, int, int);
+    /* the const getTime function defines inside the class Time */
+    void getTime() const { cout &lt;&lt; hour &lt;&lt; &quot;:&quot; &lt;&lt; min &lt;&lt; &quot;:&quot; &lt;&lt; sec &lt;&lt; endl; }
+private:
+    int hour, min, sec; /* class data members are private */
+};
+
+/* the setTime function defines outside the class Time */
+void Time::setTime(int hour, int min, int sec)
+{
+    this-&gt;hour = hour;  /* use this pointer */
+    this-&gt;min = min;
+    this-&gt;sec = sec;
+}
+
+/* the constructor defines outside the class Time */
+Time::Time(int hour, int min, int sec)
+{
+    this-&gt;hour = hour;
+    this-&gt;min = min;
+    this-&gt;sec = sec;
+}
+
+/* function main begins program execution */
+int main()
+{
+    Time time(11, 45, 1); /* instantiate a object of class Time called time */
+    time.getTime();  /* call the member function getTime of object time */
+} /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>11:45:1
+</code></pre>
+
+<p>This program not only defines a class Time but also call a member function of the instantiated object. There are a lot of knowledge points to study.</p>
+<p><strong>member functions defined outside</strong></p>
+<p>Member functions defined outside the class definition must indicate that they are members of the class:</p>
+<pre><code>void Time::setTime
+</code></pre>
+
+<p>The function name uses the <strong>scope operator</strong> <strong>::</strong> to say that we are defining the function named <strong>setTime</strong> that is defined in the scope of the <strong>Time</strong> class.</p>
+<p><strong>this parameter</strong></p>
+<pre><code>/* the constructor defines outside the class Time */
+Time::Time(int hour, int min, int sec)
+{
+    this-&gt;hour = hour;
+    this-&gt;min = min;
+    this-&gt;sec = sec;
+}
+</code></pre>
+
+<p>Each member function (except for static member functions) has an extra, implicit parameter named <strong>this</strong>. When a member function is called, the <strong>this</strong> parameter is initialized with the address of the object on which the function was invoked and in the body of the function we can refer to the <strong>this</strong> pointer explicitly to reprensent <strong>a certain member</strong> in the object.</p>
+<p><strong>class objects</strong></p>
+<p>When we define a class, we are defining a type. Once a class is defined, we can define <strong>objects</strong> of that type. Storage is allocated when we define objects.</p>
+<pre><code>Time time(11, 45, 1); /* instantiate a object of class Time called time */
+</code></pre>
+
+<p>the compiler allocates an area of storage sufficient to contain a <strong>Time</strong> class object. The name <strong>time</strong> refers to that area of storage. Each object has its own copy of the class data members. Modifying the data members of item does not change the data members of any other <strong>Time</strong> object.</p>
+<p><strong>member function call</strong></p>
+<pre><code>    time.getTime();  /* call the member function getTime of object time */
+</code></pre>
+
+<p>The member function is <strong>called</strong> in the similar way like normal function except the preceeding object name and a dot(<strong>.</strong>) followed the object.</p>
+<p><strong>const member function</strong></p>
+<pre><code>void getTime() const { cout &lt;&lt; hour &lt;&lt; &quot;:&quot; &lt;&lt; min &lt;&lt; &quot;:&quot; &lt;&lt; sec &lt;&lt; endl; }
+</code></pre>
+
+<p>A function that uses const in this way(<code>return_type function_name(parameters list) const { function body }</code>) is called a const member function and a const member function cannot change the object on whose behalf the
+function is called.</p>
+<p><strong>constructor</strong></p>
+<pre><code>/* the constructor defines outside the class Time */
+Time::Time(int hour, int min, int sec)
+{
+    this-&gt;hour = hour;
+    this-&gt;min = min;
+    this-&gt;sec = sec;
+}
+</code></pre>
+
+<p>This function is called <strong>constructor</strong>, a special member function that is distinguished from other member functions by having the same name as its class. Unlike other member functions, constructors have no return type. Constructors usually are used to initialize data members in an object.</p>
+<p>A <strong>constructor</strong> is declared inside the class and may be defined there or outside the class and generally we put the constructor in the <strong>public</strong> section of the class to make the class type to be able to define and initialize class objects.</p>
+<pre><code>    Time time(11, 45, 1); /* instantiate a object of class Time called time */
+</code></pre>
+
+<p>When a class object is created, its members can be initialize by that class's <strong>constructor</strong> function(<strong>constructor call</strong>) and <em>initializers</em> can be provided in parentheses to the right of the object name and before the semicolon.</p>
+<p><strong>Distructor</strong></p>
+<pre><code>    /* the distructor is public */
+    ~Time() {}
+</code></pre>
+
+<p>A <strong>destructor</strong> is a special member function of a class whose name is the <strong>tilde(~)</strong> character followed by the class name. A class's <strong>destructor</strong> is <strong>called</strong> when an object is destroyed automatically. A <strong>destructor</strong> receives no parameters and returns no value.</p>
+<p><strong>Copy Constructor function</strong> <em><em>/</em> without example <em>/</em></em></p>
+<p>The <strong>constructor</strong> that takes a single parameter that is a (usually const) reference to an object of the class type itself is called the <strong>copy constructor</strong>.</p>
+<pre><code>class_name(const class_name&amp; another_object) { function_body }
+</code></pre>
+
+<p>The <strong>copy constructor</strong> will copy the members from its argument into the object that is being constructed. You can decide how to copy members in function body. This function can also be defined inside or outside the class body like other function. </p>
+<pre><code>class_type new_object(another_object);
+</code></pre>
+
+<p>The copy constructor function calling is similar to the constructor function calling except that <em>initializers</em> becomes another object.</p>
+<p><strong>friend Function and friend class</strong> <em><em>/</em> without example <em>/</em></em></p>
+<pre><code>friend void setTime(Time&amp;, int, int, int);  /* the friend function prototype of Time inside the class body */
+
+/* the friend function defines outside the class body */
+void setTime(Time&amp; time, int hour, int min, int sec)
+{
+    time.hour = hour;
+    time.min = min;
+    time.sec = sec;
+}
+
+setTime(time, 15, 45, 1);  /* the friend function calling */
+</code></pre>
+
+<p>A <strong>friend</strong> function of a class is defined outside that class's scope, yet has the right to access <strong>private</strong> members of the class. To declare a function as a <strong>friend</strong> of a class, precede the function prototype in the class definition with the keyword <strong>friend</strong>. Friends are not members of the class, and the friend function is invoked for a object in this way <code>setTime(time, 15, 45, 1);</code> which takes <strong>time</strong> as an argument rather than using the name of the object to call the function like <code>time.setTime(15, 45, 1)</code>.</p>
+<p>A <strong>friend</strong> not only can be a ordinary, nonmember function but also may be a <strong>member function of another
+previously defined class</strong>, or an entire <strong>class</strong>.</p>
+<p><strong>static class members</strong></p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+/* define a class called Time */
+class Time {
+public:
+    /* the static function */
+    static int getCount() { return count; }
+    /* the constructor function is public */
+    Time(int, int, int);
+    /* the distructor function */
+    ~Time() {}
+private:
+    int hour, min, sec; /* class data members are private */
+    static int count;
+};
+
+/* the static data initializes */
+int Time::count = 0;
+
+/* the constructor function defines outside the class Time */
+Time::Time(int hour, int min, int sec)
+{
+    count++;
+    this-&gt;hour = hour;
+    this-&gt;min = min;
+    this-&gt;sec = sec;
+}
+
+/* function main begins program execution */
+int main()
+{
+    cout &lt;&lt; Time::getCount() &lt;&lt; endl; /* the static function can be called by class directly */
+    Time time(11, 45, 1); /* instantiate a object of class Time called time */
+    cout &lt;&lt; time.getCount() &lt;&lt; endl; /* the static function can be called like other member function*/
+} /* end function main */
+</code></pre>
+
+<p>The output screen</p>
+<pre><code>0
+1
+</code></pre>
+
+<p>A <strong>static</strong> member is shared by all objects of a class. A <strong>static data member</strong> exists independently of any object of its class. A **static member function **has no <strong>this</strong> parameter. It may directly access the static members of its class but may not directly use the nonstatic members.</p>
+<p>A member is made static by prefixing the member declaration with the <strong>keyword static</strong>. The static members obey the normal public/private access rules.</p>
+<pre><code>    /* the static function */
+    static int getCount() { return count; }
+    static int count;
+    /* getCount() is public, count is private */
+</code></pre>
+
+<p>A <strong>static member</strong> can be invoked directly from the class using the scope operator or indirectly through an object.</p>
+<pre><code>    cout &lt;&lt; Time::getCount() &lt;&lt; endl; /* the static function can be called by class directly */
+    cout &lt;&lt; time.getCount() &lt;&lt; endl; /* the static function can be called like other member function*/
+</code></pre>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
