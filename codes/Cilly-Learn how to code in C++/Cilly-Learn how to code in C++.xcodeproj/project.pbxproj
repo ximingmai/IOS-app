@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A40318E11D3B137800E45300 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40318E01D3B137800E45300 /* RootView.swift */; };
+		A40318E31D3B159900E45300 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40318E21D3B159900E45300 /* CustomCell.swift */; };
+		A40318E61D3B214100E45300 /* Lesson_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40318E51D3B214100E45300 /* Lesson_1.swift */; };
+		A40318E91D3B267600E45300 /* CustomCell_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40318E81D3B267600E45300 /* CustomCell_1.swift */; };
+		A40318EC1D3B2A5A00E45300 /* DataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40318EB1D3B2A5A00E45300 /* DataContext.swift */; };
+		A40D5DF91D3B62A000CB2D8C /* Lesson_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D5DF81D3B62A000CB2D8C /* Lesson_2.swift */; };
+		A40D5DFB1D3B62B800CB2D8C /* CustomCell_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D5DFA1D3B62B800CB2D8C /* CustomCell_2.swift */; };
+		A4F2460B1D366C4C00CC85CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F2460A1D366C4C00CC85CC /* AppDelegate.swift */; };
+		A4F246101D366C4C00CC85CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F2460E1D366C4C00CC85CC /* Main.storyboard */; };
+		A4F246121D366C4C00CC85CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4F246111D366C4C00CC85CC /* Assets.xcassets */; };
+		A4F246151D366C4C00CC85CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F246131D366C4C00CC85CC /* LaunchScreen.storyboard */; };
+		A4F246201D366C4D00CC85CC /* Cilly_Learn_how_to_code_in_C__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F2461F1D366C4D00CC85CC /* Cilly_Learn_how_to_code_in_C__Tests.swift */; };
+		A4F2462B1D366C4D00CC85CC /* Cilly_Learn_how_to_code_in_C__UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F2462A1D366C4D00CC85CC /* Cilly_Learn_how_to_code_in_C__UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4F2461C1D366C4D00CC85CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4F245FF1D366C4C00CC85CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4F246061D366C4C00CC85CC;
+			remoteInfo = "Cilly-Learn how to code in C++";
+		};
+		A4F246271D366C4D00CC85CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4F245FF1D366C4C00CC85CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4F246061D366C4C00CC85CC;
+			remoteInfo = "Cilly-Learn how to code in C++";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A40318E01D3B137800E45300 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		A40318E21D3B159900E45300 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		A40318E51D3B214100E45300 /* Lesson_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson_1.swift; sourceTree = "<group>"; };
+		A40318E81D3B267600E45300 /* CustomCell_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell_1.swift; sourceTree = "<group>"; };
+		A40318EB1D3B2A5A00E45300 /* DataContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContext.swift; sourceTree = "<group>"; };
+		A40D5DF81D3B62A000CB2D8C /* Lesson_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson_2.swift; sourceTree = "<group>"; };
+		A40D5DFA1D3B62B800CB2D8C /* CustomCell_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell_2.swift; sourceTree = "<group>"; };
+		A4F246071D366C4C00CC85CC /* Cilly-Learn how to code in C++.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cilly-Learn how to code in C++.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4F2460A1D366C4C00CC85CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A4F2460F1D366C4C00CC85CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A4F246111D366C4C00CC85CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4F246141D366C4C00CC85CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4F246161D366C4C00CC85CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4F2461B1D366C4D00CC85CC /* Cilly-Learn how to code in C++Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cilly-Learn how to code in C++Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4F2461F1D366C4D00CC85CC /* Cilly_Learn_how_to_code_in_C__Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cilly_Learn_how_to_code_in_C__Tests.swift; sourceTree = "<group>"; };
+		A4F246211D366C4D00CC85CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4F246261D366C4D00CC85CC /* Cilly-Learn how to code in C++UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cilly-Learn how to code in C++UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4F2462A1D366C4D00CC85CC /* Cilly_Learn_how_to_code_in_C__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cilly_Learn_how_to_code_in_C__UITests.swift; sourceTree = "<group>"; };
+		A4F2462C1D366C4D00CC85CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4F246041D366C4C00CC85CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4F246181D366C4D00CC85CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4F246231D366C4D00CC85CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40318E41D3B16B700E45300 /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				A40318E01D3B137800E45300 /* RootView.swift */,
+				A40318E21D3B159900E45300 /* CustomCell.swift */,
+			);
+			name = RootView;
+			sourceTree = "<group>";
+		};
+		A40318E71D3B235600E45300 /* Lesson_1 */ = {
+			isa = PBXGroup;
+			children = (
+				A40318E51D3B214100E45300 /* Lesson_1.swift */,
+				A40318E81D3B267600E45300 /* CustomCell_1.swift */,
+			);
+			name = Lesson_1;
+			sourceTree = "<group>";
+		};
+		A40318EA1D3B2A3F00E45300 /* DataContext */ = {
+			isa = PBXGroup;
+			children = (
+				A40318EB1D3B2A5A00E45300 /* DataContext.swift */,
+			);
+			name = DataContext;
+			sourceTree = "<group>";
+		};
+		A40D5DF71D3B628000CB2D8C /* Lesson_2 */ = {
+			isa = PBXGroup;
+			children = (
+				A40D5DF81D3B62A000CB2D8C /* Lesson_2.swift */,
+				A40D5DFA1D3B62B800CB2D8C /* CustomCell_2.swift */,
+			);
+			name = Lesson_2;
+			sourceTree = "<group>";
+		};
+		A4F245FE1D366C4C00CC85CC = {
+			isa = PBXGroup;
+			children = (
+				A4F246091D366C4C00CC85CC /* Cilly-Learn how to code in C++ */,
+				A4F2461E1D366C4D00CC85CC /* Cilly-Learn how to code in C++Tests */,
+				A4F246291D366C4D00CC85CC /* Cilly-Learn how to code in C++UITests */,
+				A4F246081D366C4C00CC85CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4F246081D366C4C00CC85CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4F246071D366C4C00CC85CC /* Cilly-Learn how to code in C++.app */,
+				A4F2461B1D366C4D00CC85CC /* Cilly-Learn how to code in C++Tests.xctest */,
+				A4F246261D366C4D00CC85CC /* Cilly-Learn how to code in C++UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4F246091D366C4C00CC85CC /* Cilly-Learn how to code in C++ */ = {
+			isa = PBXGroup;
+			children = (
+				A4F2460A1D366C4C00CC85CC /* AppDelegate.swift */,
+				A40318EA1D3B2A3F00E45300 /* DataContext */,
+				A40318E71D3B235600E45300 /* Lesson_1 */,
+				A40318E41D3B16B700E45300 /* RootView */,
+				A40D5DF71D3B628000CB2D8C /* Lesson_2 */,
+				A4F2460E1D366C4C00CC85CC /* Main.storyboard */,
+				A4F246111D366C4C00CC85CC /* Assets.xcassets */,
+				A4F246131D366C4C00CC85CC /* LaunchScreen.storyboard */,
+				A4F246161D366C4C00CC85CC /* Info.plist */,
+			);
+			path = "Cilly-Learn how to code in C++";
+			sourceTree = "<group>";
+		};
+		A4F2461E1D366C4D00CC85CC /* Cilly-Learn how to code in C++Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A4F2461F1D366C4D00CC85CC /* Cilly_Learn_how_to_code_in_C__Tests.swift */,
+				A4F246211D366C4D00CC85CC /* Info.plist */,
+			);
+			path = "Cilly-Learn how to code in C++Tests";
+			sourceTree = "<group>";
+		};
+		A4F246291D366C4D00CC85CC /* Cilly-Learn how to code in C++UITests */ = {
+			isa = PBXGroup;
+			children = (
+				A4F2462A1D366C4D00CC85CC /* Cilly_Learn_how_to_code_in_C__UITests.swift */,
+				A4F2462C1D366C4D00CC85CC /* Info.plist */,
+			);
+			path = "Cilly-Learn how to code in C++UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4F246061D366C4C00CC85CC /* Cilly-Learn how to code in C++ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4F2462F1D366C4D00CC85CC /* Build configuration list for PBXNativeTarget "Cilly-Learn how to code in C++" */;
+			buildPhases = (
+				A4F246031D366C4C00CC85CC /* Sources */,
+				A4F246041D366C4C00CC85CC /* Frameworks */,
+				A4F246051D366C4C00CC85CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cilly-Learn how to code in C++";
+			productName = "Cilly-Learn how to code in C++";
+			productReference = A4F246071D366C4C00CC85CC /* Cilly-Learn how to code in C++.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A4F2461A1D366C4D00CC85CC /* Cilly-Learn how to code in C++Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4F246321D366C4D00CC85CC /* Build configuration list for PBXNativeTarget "Cilly-Learn how to code in C++Tests" */;
+			buildPhases = (
+				A4F246171D366C4D00CC85CC /* Sources */,
+				A4F246181D366C4D00CC85CC /* Frameworks */,
+				A4F246191D366C4D00CC85CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4F2461D1D366C4D00CC85CC /* PBXTargetDependency */,
+			);
+			name = "Cilly-Learn how to code in C++Tests";
+			productName = "Cilly-Learn how to code in C++Tests";
+			productReference = A4F2461B1D366C4D00CC85CC /* Cilly-Learn how to code in C++Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A4F246251D366C4D00CC85CC /* Cilly-Learn how to code in C++UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4F246351D366C4D00CC85CC /* Build configuration list for PBXNativeTarget "Cilly-Learn how to code in C++UITests" */;
+			buildPhases = (
+				A4F246221D366C4D00CC85CC /* Sources */,
+				A4F246231D366C4D00CC85CC /* Frameworks */,
+				A4F246241D366C4D00CC85CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4F246281D366C4D00CC85CC /* PBXTargetDependency */,
+			);
+			name = "Cilly-Learn how to code in C++UITests";
+			productName = "Cilly-Learn how to code in C++UITests";
+			productReference = A4F246261D366C4D00CC85CC /* Cilly-Learn how to code in C++UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4F245FF1D366C4C00CC85CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "颜泽鑫";
+				TargetAttributes = {
+					A4F246061D366C4C00CC85CC = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = M4W5VQJ6UL;
+					};
+					A4F2461A1D366C4D00CC85CC = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = M4W5VQJ6UL;
+						TestTargetID = A4F246061D366C4C00CC85CC;
+					};
+					A4F246251D366C4D00CC85CC = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = M4W5VQJ6UL;
+						TestTargetID = A4F246061D366C4C00CC85CC;
+					};
+				};
+			};
+			buildConfigurationList = A4F246021D366C4C00CC85CC /* Build configuration list for PBXProject "Cilly-Learn how to code in C++" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4F245FE1D366C4C00CC85CC;
+			productRefGroup = A4F246081D366C4C00CC85CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4F246061D366C4C00CC85CC /* Cilly-Learn how to code in C++ */,
+				A4F2461A1D366C4D00CC85CC /* Cilly-Learn how to code in C++Tests */,
+				A4F246251D366C4D00CC85CC /* Cilly-Learn how to code in C++UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4F246051D366C4C00CC85CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4F246151D366C4C00CC85CC /* LaunchScreen.storyboard in Resources */,
+				A4F246121D366C4C00CC85CC /* Assets.xcassets in Resources */,
+				A4F246101D366C4C00CC85CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4F246191D366C4D00CC85CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4F246241D366C4D00CC85CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4F246031D366C4C00CC85CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A40318E61D3B214100E45300 /* Lesson_1.swift in Sources */,
+				A40318EC1D3B2A5A00E45300 /* DataContext.swift in Sources */,
+				A40D5DF91D3B62A000CB2D8C /* Lesson_2.swift in Sources */,
+				A40318E31D3B159900E45300 /* CustomCell.swift in Sources */,
+				A40318E91D3B267600E45300 /* CustomCell_1.swift in Sources */,
+				A40318E11D3B137800E45300 /* RootView.swift in Sources */,
+				A4F2460B1D366C4C00CC85CC /* AppDelegate.swift in Sources */,
+				A40D5DFB1D3B62B800CB2D8C /* CustomCell_2.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4F246171D366C4D00CC85CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4F246201D366C4D00CC85CC /* Cilly_Learn_how_to_code_in_C__Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4F246221D366C4D00CC85CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4F2462B1D366C4D00CC85CC /* Cilly_Learn_how_to_code_in_C__UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4F2461D1D366C4D00CC85CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4F246061D366C4C00CC85CC /* Cilly-Learn how to code in C++ */;
+			targetProxy = A4F2461C1D366C4D00CC85CC /* PBXContainerItemProxy */;
+		};
+		A4F246281D366C4D00CC85CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4F246061D366C4C00CC85CC /* Cilly-Learn how to code in C++ */;
+			targetProxy = A4F246271D366C4D00CC85CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A4F2460E1D366C4C00CC85CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4F2460F1D366C4C00CC85CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A4F246131D366C4C00CC85CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4F246141D366C4C00CC85CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4F2462D1D366C4D00CC85CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4F2462E1D366C4D00CC85CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4F246301D366C4D00CC85CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Cilly-Learn how to code in C++/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stary.Cilly-Learn-how-to-code-in-C--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A4F246311D366C4D00CC85CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Cilly-Learn how to code in C++/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stary.Cilly-Learn-how-to-code-in-C--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A4F246331D366C4D00CC85CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Cilly-Learn how to code in C++Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stary.Cilly-Learn-how-to-code-in-C--Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cilly-Learn how to code in C++.app/Cilly-Learn how to code in C++";
+			};
+			name = Debug;
+		};
+		A4F246341D366C4D00CC85CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Cilly-Learn how to code in C++Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stary.Cilly-Learn-how-to-code-in-C--Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cilly-Learn how to code in C++.app/Cilly-Learn how to code in C++";
+			};
+			name = Release;
+		};
+		A4F246361D366C4D00CC85CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Cilly-Learn how to code in C++UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stary.Cilly-Learn-how-to-code-in-C--UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Cilly-Learn how to code in C++";
+			};
+			name = Debug;
+		};
+		A4F246371D366C4D00CC85CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Cilly-Learn how to code in C++UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stary.Cilly-Learn-how-to-code-in-C--UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Cilly-Learn how to code in C++";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4F246021D366C4C00CC85CC /* Build configuration list for PBXProject "Cilly-Learn how to code in C++" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4F2462D1D366C4D00CC85CC /* Debug */,
+				A4F2462E1D366C4D00CC85CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4F2462F1D366C4D00CC85CC /* Build configuration list for PBXNativeTarget "Cilly-Learn how to code in C++" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4F246301D366C4D00CC85CC /* Debug */,
+				A4F246311D366C4D00CC85CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4F246321D366C4D00CC85CC /* Build configuration list for PBXNativeTarget "Cilly-Learn how to code in C++Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4F246331D366C4D00CC85CC /* Debug */,
+				A4F246341D366C4D00CC85CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4F246351D366C4D00CC85CC /* Build configuration list for PBXNativeTarget "Cilly-Learn how to code in C++UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4F246361D366C4D00CC85CC /* Debug */,
+				A4F246371D366C4D00CC85CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4F245FF1D366C4C00CC85CC /* Project object */;
+}
